@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Country news</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="owl-carousel owl-theme">
+            <script id="template" type="x-tmpl-mustache">
+            {{#countries}}
+            <div class="item" onclick=controller.countryClick("{{cca2}}")>
+                <img src={{ flags.png }}>
+            </div>
+            {{/countries}}
+            </script>
+        </div>
+
+        <div class="news mt-5">
+        </div>
+        <script id="news-template" type="x-tmpl-mustache">
+                <div class="news-item">
+                        {{#news}}
+                        <div class="d-flex justify-content-between">
+                            <div class="title">{{ title }}</div>
+                            <div class="author">{{ author }}</div>
+                        </div>
+                        <p class="lead description">
+                            {{ description }}
+                        </p>
+                        {{/news}}
+                    </div>
+        </script>
+    </div>
+    <script src="https://kit.fontawesome.com/dfe4be2fda.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/mustache@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

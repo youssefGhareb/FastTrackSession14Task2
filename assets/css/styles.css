@@ -1,0 +1,11 @@
+.owl-theme .item {
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px 100px;
+}
+.owl-theme .item img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=styles.css.map */
